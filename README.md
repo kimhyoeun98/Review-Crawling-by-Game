@@ -150,7 +150,7 @@ streamlit run service/app.py
 
 | 문서 | 경로 |
 |------|------|
-| 테크니컬 리포트 (설계 문서) | [`docs/Steam_리뷰_감성분석_테크니컬 리포트.docx`](docs/Steam_리뷰_감성분석_테크니컬 리포트.docx) · `Steam_리뷰_감성분석_테크니컬 리포트.docx` |
+| 테크니컬 리포트 (설계 문서) | `Steam_리뷰_감성분석_테크니컬 리포트.docx` |
 | 발표 자료 (PDF) | `docs/Steam_리뷰_감성분석_발표.pdf` |
 | 시연 영상 | `docs/demo.mp4` |
 
