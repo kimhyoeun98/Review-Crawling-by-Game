@@ -44,7 +44,6 @@ Steam 리뷰를 장르별로 크롤링해 한국어 감성 분석 모델(KcELECT
 * **v1.0.0**
   * 단일 스크립트에서 객체지향(OOP) 구조로 모듈화 (`main.py`, `SteamAppIDExtractor.py`, `SteamMassiveReviewCrawler.py` 분리)
   * Selenium을 활용한 카테고리별 '최고 인기 제품' AppID 자동 추출(헤드리스 모드 지원) 기능 구현
->>>>>>> c1b5a8ed4104c6616594f47a8d734d62ee9c1ec2
 
 ## 📂 프로젝트 구조
 
