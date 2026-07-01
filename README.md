@@ -66,9 +66,8 @@ project_webCrawling/
 ├── eval_model.py / eval_baseline.py / eval_lstm.py  # 3개 모델 검증 비교
 ├── model/kcelectra/              # 파인튜닝된 모델 가중치 (Git LFS · 490MB)
 ├── data/                         # 데이터
-│   ├── steam_dataset.zip             # 정본 리뷰 + 감성 캐시 (Git LFS · 압축본 75MB)
-│   │     ├─ steam_raw_reviews.jsonl        # 수집 리뷰 (560,520건)
-│   │     └─ steam_raw_reviews_scored.jsonl # 모델 감성 분석 캐시
+│   ├── steam_raw_reviews.jsonl        # 수집 리뷰 (560,520건)
+│   ├── steam_raw_reviews_scored.jsonl # 모델 감성 분석 캐시
 │   ├── game_category_map.json        # 게임명 → 카테고리
 │   ├── completed_appids.txt          # 크롤링 체크포인트
 │   └── steam_appid/                  # 장르별 appid 목록
@@ -101,20 +100,13 @@ pip install -r requirements.txt
 # pip install torch --index-url https://download.pytorch.org/whl/cu128
 ```
 
-### 2. 데이터 압축 해제
-```bash
-# steam_dataset.zip 안의 jsonl 2개를 data/ 아래로 풀어줍니다.
-cd data && unzip steam_dataset.zip && cd ..
-# -> data/steam_raw_reviews.jsonl, data/steam_raw_reviews_scored.jsonl
-```
-
-### 3. 서비스 실행
+### 2. 서비스 실행
 ```bash
 streamlit run service/app.py
 # 브라우저에서 http://localhost:8501 접속
 ```
 
-### 4. 처음부터 재현하기
+### 3. 처음부터 재현하기
 ```bash
 # (1) 리뷰 크롤링 + 전처리
 python main.py
