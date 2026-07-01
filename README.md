@@ -72,7 +72,7 @@ project_webCrawling/
 │   ├── completed_appids.txt          # 크롤링 체크포인트
 │   └── steam_appid/                  # 장르별 appid 목록
 └── docs/                         # 문서
-    ├── Steam_Review_Service_Design_Report # 테크니컬 리포트 (설계 문서)
+    ├── Steam_리뷰_감성분석_테크니컬_리포트 # 테크니컬 리포트 (설계 문서)
     ├── Steam_리뷰_감성분석_발표.pdf   # 발표 자료 
     └── demo.mp4                      # 시연 영상
 ```
