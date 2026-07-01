@@ -35,11 +35,12 @@ class SteamAppIDExtractor:
         scroll_count = 0
         app_list = []
         seen_ids = set()
-        backup_filename = f"target_appids_{category_keyword}.jsonl"
-        
+        os.makedirs("./data/steam_appid", exist_ok=True)
+        backup_filename = f"./data/steam_appid/target_appids_{category_keyword}.jsonl"
+
         # 백업 파일 초기화 (기존 덮어쓰기)
         with open(backup_filename, 'w', encoding='utf-8') as f:
-            pass 
+            pass
 
         wait = WebDriverWait(self.driver, 10)
 

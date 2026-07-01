@@ -48,7 +48,7 @@ if __name__ == "__main__":
                 print(f"[스킵] '{title}'(은)는 이미 수집이 완료된 게임입니다.")
                 continue
                 
-            crawler.fetch_and_save_reviews(appid, title)
+            crawler.fetch_and_save_reviews(appid, title, category)
             crawler.save_completed_appid(appid)
             time.sleep(2) 
 

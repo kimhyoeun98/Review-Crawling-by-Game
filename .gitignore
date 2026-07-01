@@ -1,0 +1,33 @@
+# ── Python ──
+__pycache__/
+*.pyc
+
+# ── 로그 ──
+*_log.txt
+
+# ── 발표자료(pptx) 생성용 Node 스크립트 · 결과물(pptx/pdf)은 docs/에 커밋 ──
+node_modules/
+package.json
+package-lock.json
+build_deck.js
+
+# ── 임시 / 오피스 잠금 파일 ──
+~$*
+slides_png/
+
+# ── 에디터 / 로컬 설정 ──
+.vscode/
+.claude/settings.local.json
+
+# ── 대용량 원본 데이터 ──
+# 정본 리뷰 + 감성 스코어 데이터는 data/steam_dataset.zip (Git LFS) 으로 배포한다.
+# 압축을 푼 loose 파일과 중간 산출물(csv, 961k 크롤 등)은 추적하지 않는다.
+data/*.jsonl
+data/*.csv
+data/_archive_crawls/
+
+# 단, 아래는 추적 유지 (배포본 + 소형 메타데이터)
+!data/steam_dataset.zip
+!data/game_category_map.json
+!data/completed_appids.txt
+!data/steam_appid/

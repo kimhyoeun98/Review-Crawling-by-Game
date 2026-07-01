@@ -45,7 +45,7 @@ class SteamMassiveReviewCrawler:
             f.write(f"{appid}\n")
             
     # AppID를 기반으로 리뷰를 수집하여 JSONL 파일에 저장하는 메서드
-    def fetch_and_save_reviews(self, appid, title):
+    def fetch_and_save_reviews(self, appid, title, category=None):
         official_name = self.get_official_name(appid)
         print(f" -> '{official_name}' (AppID: {appid}) 수집 시작...")
         
@@ -69,7 +69,9 @@ class SteamMassiveReviewCrawler:
                 for review in data.get('reviews', []):
                     if review['review'].strip():
                         review_data = {
-                            "게임 이름": official_name, 
+                            "appid": str(appid),
+                            "게임 이름": official_name,
+                            "카테고리": category,
                             "작성자": review['author']['steamid'],
                             "리뷰 내용": review['review'].strip(),
                             "평점": "추천" if review['voted_up'] else "비추천"
