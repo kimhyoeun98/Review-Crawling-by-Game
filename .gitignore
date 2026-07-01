@@ -15,9 +15,8 @@ build_deck.js
 ~$*
 slides_png/
 
-# ── 에디터 / 로컬 설정 ──
+# ── 에디터  ──
 .vscode/
-.claude/settings.local.json
 
 # ── 대용량 원본 데이터 ──
 # 정본 리뷰 + 감성 스코어 데이터는 data/steam_dataset.zip (Git LFS) 으로 배포한다.
